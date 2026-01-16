@@ -1,1 +1,1 @@
-# minimal-waybar
+# Minimal Waybar
