@@ -1,0 +1,154 @@
+@define-color accent #8BCBC6;
+@define-color foreground #FDF9E8;
+@define-color background #2D2D2D;
+
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+    color: @foreground;
+    border-radius: 12px;
+    min-height: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-left {
+    border-radius: 12px;
+    background: alpha(@background, 0.6);
+    margin: 8px 0px 8px 8px;
+}
+
+.modules-right {
+    border-radius: 12px;
+    background: alpha(@background, 0.6);
+    margin: 8px 12px 8px 0px;
+}
+
+.modules-center {
+    border-radius: 12px;
+    background: alpha(@background, 0.6);
+    margin: 6px 2px 6px 2px;
+}
+
+#custom-weather {
+    font-size: 13px;
+    padding: 0px 8px 0px 12px;
+}
+
+#idle_inhibitor {
+    font-size: 14px;
+    margin: 2px 16px 0px 8px;
+}
+
+#idle_inhibitor.activated {
+    color: @accent;
+    animation-name: ember-blink;
+    animation-iteration-count: infinite;
+    animation-duration: 1.7s;
+}
+
+#workspaces button {
+    padding: 4px 10px 4px 10px;
+    margin: 6px 2px 6px 2px;
+    border-radius: 8px;
+    transition: all 0.15s ease-in-out;
+}
+
+#workspaces button label {
+    color: @foreground;
+}
+
+#workspaces button.active {
+    background: @background;
+    color: @foreground;
+}
+
+#tray,
+#battery,
+#network,
+#memory,
+#cpu,
+#backlight,
+#pulseaudio,
+#custom-expand-icon {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#mpris,
+#clock,
+#custom-screenrecording-indicator,
+#custom-updatespacman {
+    min-width: 16px;
+    margin: 4px 4px 0px 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#custom-updatespacman {
+    font-size: 13px;
+    padding-left: 0px;
+}
+
+#custom-expand-icon {
+    min-width: 10px;
+}
+
+#clock {
+    color: @foreground;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+#custom-tray-cap {
+    min-width: 4px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#mpris {
+    color: @accent;
+}
+
+#custom-screenrecording-indicator {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: alpha(@foreground, 0.5);
+}
+
+#custom-screenrecording-indicator.active {
+    color: @foreground;
+    animation-name: ember-blink;
+    animation-duration: 0.65s;
+}
+
+tooltip {
+    padding: 6px 8px;
+    background: alpha(@background, 0.9);
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @foreground;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@keyframes ember-blink {
+    to {
+        color: alpha(@accent, 0.3);
+    }
+}
