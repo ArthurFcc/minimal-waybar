@@ -25,3 +25,6 @@ To ensure the icons and modules render correctly, you will need the following:
 1.  **Waybar**: The status bar itself.
 2.  **Nerd Fonts**: Required for icons.
     - Recommended: [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads) (or check `style.css` if a specific font family is defined).
+
+## 🫡 Credits
+Huge thanks to [HANCORE](https://github.com/HANCORE-linux) and [OldJobobo](https://github.com/OldJobobo). My waybar implementations are heavily inspired by them.
